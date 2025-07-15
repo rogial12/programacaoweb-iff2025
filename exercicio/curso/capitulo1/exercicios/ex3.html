@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscador</title>
+</head>
+<body>
+    <h1>Buscador</h1>
+
+    <input type="text" id="searchBox" placeholder="Preencha sua busca" autocomplete="off">
+    <button onclick="searchGoogle()">Buscar</button>
+    <button onclick="clearSearchBox()">Limpar</button>
+
+    <script>
+        function searchGoogle() {
+            var searchTerm = document.getElementById("searchBox").value;
+            if (searchTerm) {
+                window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(searchTerm);
+            }
+        }
+
+        function clearSearchBox() {
+            document.getElementById("searchBox").value = "";
+        }
+    </script>
+</body>
+</html>
